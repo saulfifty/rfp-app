@@ -4,8 +4,8 @@ import os
 
 load_dotenv()
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-
+#client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = "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"
 def get_ai_summary_and_steps(rfp_text):
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
