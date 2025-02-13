@@ -2,11 +2,10 @@ import openai
 from dotenv import load_dotenv
 import os
 
-# Cargar las variables de entorno desde el archivo .env
 load_dotenv()
 
-# Asignar la clave API desde las variables de entorno
 openai.api_key = os.getenv("OPENAI_API_KEY")
+print(f"API Key: {openai.api_key}")
 
 def get_ai_summary_and_steps(rfp_text):
     response = openai.ChatCompletion.create(
